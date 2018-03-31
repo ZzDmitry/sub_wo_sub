@@ -1,6 +1,7 @@
 const assert = require('assert');
 
 const {sub: subWithMinus} = require('../sub-with-minus');
+const subWStringMinus = require('../sub-with-string-minus');
 
 function makeDescribe(name, subFunction) {
 	
@@ -71,3 +72,5 @@ function makeDescribe(name, subFunction) {
 }
 
 makeDescribe('test with minus', subWithMinus);
+makeDescribe('test with minus', subWStringMinus.subEval);
+makeDescribe('test with minus', subWStringMinus.subParseFromString);
