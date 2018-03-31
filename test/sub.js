@@ -4,6 +4,7 @@ const {sub: subWithMinus} = require('../sub-with-minus');
 const subWStringMinus = require('../sub-with-string-minus');
 const {sub: subBits} = require('../sub-bits');
 const subUsingMinusOne = require('../sub-using-minus-one');
+const {sub: subLogs} = require('../sub-using-logs');
 
 function makeDescribe(name, subFunction) {
 	
@@ -80,3 +81,4 @@ makeDescribe('test with bit operations', subBits); // fails with floats
 makeDescribe('test using -1, bits', subUsingMinusOne.subBits);
 makeDescribe('test using -1, cos(PI)', subUsingMinusOne.subCosPI);
 makeDescribe('test using -1, log', subUsingMinusOne.subLog);
+makeDescribe('test using logs', subLogs); // precision lost

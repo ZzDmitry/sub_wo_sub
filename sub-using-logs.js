@@ -1,0 +1,1 @@
+module.exports.sub = (a, b) => Math.log(Math.pow(Math.E, a) / Math.pow(Math.E, b));
