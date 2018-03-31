@@ -2,6 +2,7 @@ const assert = require('assert');
 
 const {sub: subWithMinus} = require('../sub-with-minus');
 const subWStringMinus = require('../sub-with-string-minus');
+const {sub: subBits} = require('../sub-bits');
 
 function makeDescribe(name, subFunction) {
 	
@@ -72,5 +73,6 @@ function makeDescribe(name, subFunction) {
 }
 
 makeDescribe('test with minus', subWithMinus);
-makeDescribe('test with minus', subWStringMinus.subEval);
-makeDescribe('test with minus', subWStringMinus.subParseFromString);
+makeDescribe('test with eval', subWStringMinus.subEval);
+makeDescribe('test with minus char', subWStringMinus.subParseFromString);
+makeDescribe('test with bit operations', subBits); // fails with floats
